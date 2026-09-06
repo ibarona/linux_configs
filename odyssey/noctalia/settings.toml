@@ -1,0 +1,156 @@
+config_version = 14
+
+[backdrop]
+enabled = true
+
+[bar.default]
+center = [ "date", "clock", "spacer_2", "weather" ]
+end = [
+    "tray",
+    "notifications",
+    "clipboard",
+    "volume",
+    "brightness",
+    "battery",
+    "network",
+    "cpu",
+    "temp",
+    "ram",
+    "screenshot",
+    "control-center",
+    "session"
+]
+start = [ "launcher", "workspaces", "taskbar" ]
+
+[brightness]
+enable_ddcutil = true
+
+[dock]
+icon_size = 36
+launcher_custom_image = "/home/ibarona/.config/noctalia/odyssey-logo.png"
+launcher_position = "start"
+pinned = [ "zen-browser", "terminal", "xbps-gui", "odyssey-controlcenter", "guinit" ]
+
+[idle]
+behavior_order = [ "lock", "screen-off", "lock-and-suspend" ]
+
+    [idle.behavior.lock]
+    action = "lock"
+    enabled = true
+    timeout = 600.0
+
+    [idle.behavior.lock-and-suspend]
+    action = "lock_and_suspend"
+    enabled = true
+    timeout = 900.0
+
+    [idle.behavior.screen-off]
+    action = "screen_off"
+    enabled = true
+    timeout = 660.0
+
+[location]
+address = "Leganés, Madrid"
+
+[lockscreen_widgets]
+enabled = false
+schema_version = 2
+widget_order = [ "lockscreen-login-box@HDMI-A-1", "lockscreen-login-box@eDP-1" ]
+
+    [lockscreen_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-1"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 960.0
+    cy = 898.0
+    output = "HDMI-A-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 854.0
+    cy = 868.5
+    output = "eDP-1"
+    placement_height = 914.0
+    placement_width = 1463.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@eDP-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+[shell]
+font_family = "Noto Sans"
+polkit_agent = true
+telemetry_enabled = true
+
+[theme.templates]
+builtin_ids = [ "btop", "helix", "niri", "starship" ]
+
+[wallpaper]
+directory = "/home/ibarona/Imágenes/Wallpapers"
+fill_mode = "stretch"
+
+    [wallpaper.default]
+    path = "/home/ibarona/Imágenes/Wallpapers/Odyssey-Linux-11.png"
+
+    [wallpaper.last]
+    path = "/home/ibarona/Imágenes/Wallpapers/Odyssey-Linux-11.png"
+
+    [wallpaper.monitors.eDP-1]
+    path = "/home/ibarona/Imágenes/Wallpapers/Odyssey-Linux-11.png"
+
+[widget.brightness]
+show_label = false
+
+[widget.clock]
+format = "{:%H:%M}"
+
+[widget.launcher]
+custom_image = "/home/ibarona/.config/noctalia/odyssey-logo.png"
+
+[widget.network]
+show_label = false
+
+[widget.spacer_2]
+type = "spacer"
+
+[widget.volume]
+show_label = false
