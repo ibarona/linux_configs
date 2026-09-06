@@ -1,0 +1,32 @@
+window-rule {
+    // Rounded corners for a modern look.
+    geometry-corner-radius 20 // Set every window radius to 20
+
+    // Clips window contents to the rounded corner boundaries.
+    clip-to-geometry true
+}
+
+
+// Para hacer que las ventanas sin foco tengan menos opacidad
+
+//window-rule {
+//    opacity 1.0
+//}
+
+//window-rule {
+//    match is-focused=false
+//    opacity 0.98
+//}
+
+// Floating Noctalia settings window.
+window-rule {
+  match app-id="dev.noctalia.Noctalia"
+  open-floating true
+  default-column-width { fixed 1080; }
+  default-window-height { fixed 920; }
+}
+
+layer-rule {
+  match namespace="^noctalia-backdrop"
+  place-within-backdrop true
+}

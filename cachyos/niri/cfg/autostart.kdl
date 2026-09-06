@@ -1,0 +1,23 @@
+// ────────────── Startup Applications ──────────────
+// https://github.com/YaLTeR/niri/wiki/Configuration:-Miscellaneous#spawn-sh-at-startup
+
+    environment {
+        ELECTRON_OZONE_PLATFORM_HINT "auto"
+        QT_QPA_PLATFORM "wayland"
+        QT_QPA_PLATFORMTHEME "kde"
+        //QT_QPA_PLATFORMTHEME "qt5ct:qt6ct"
+        QT_WAYLAND_DISABLE_WINDOWDECORATION "1"
+        XDG_CURRENT_DESKTOP "niri"
+        XDG_SESSION_TYPE "wayland"
+        XDG_MENU_PREFIX "plasma-"
+    }
+
+    spawn-at-startup "dbus-update-activation-environment" "--systemd" "WAYLAND_DISPLAY" "XDG_CURRENT_DESKTOP" "XDG_SESSION_TYPE" "QT_QPA_PLATFORM" "QT_QPA_PLATFORMTHEME" "QT_WAYLAND_DISABLE_WINDOWDECORATION" "ELECTRON_OZONE_PLATFORM_HINT" "XDG_MENU_PREFIX"
+
+    //Para que dolphin tenga las aplicaciones predeterminadas
+    spawn-at-startup "kbuildsycoca6" "--noincremental"
+    spawn-at-startup "udiskie" "--automount" "--notify"
+    spawn-at-startup "xdg-user-dirs-update"
+    spawn-sh-at-startup "/usr/lib/pam_kwallet_init"
+    spawn-at-startup "noctalia"
+
