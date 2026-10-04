@@ -1,0 +1,5 @@
+XKB_DEFAULT_LAYOUT=es
+XKB_DEFAULT_MODEL=pc105
+XKB_DEFAULT_OPTIONS=terminate:ctrl_alt_bksp
+XCURSOR_THEME=catppuccin-mocha-mauve-cursors
+XCURSOR_SIZE=24
