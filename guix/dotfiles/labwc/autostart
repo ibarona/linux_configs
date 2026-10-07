@@ -1,0 +1,12 @@
+#!/bin/sh
+# ~/.config/labwc/autostart
+
+# Exporta el entorno Wayland al bus de sesión (notificaciones, portales...)
+dbus-update-activation-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP XDG_SESSION_TYPE
+
+# Shell: barra, lanzador, notificaciones, bloqueo, fondo de pantalla...
+noctalia &
+
+# Thunar en modo demonio: necesario para el automontaje de memorias USB
+# (thunar-volman). Quítalo si prefieres pcmanfm-qt.
+pcmanfm-qt --daemon-mode &

@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<labwc_config>
+  <keyboard>
+    <!-- Atajos por defecto de labwc -->
+    <default />
+
+    <!-- Terminal -->
+    <keybind key="W-Return">
+      <action name="Execute"><command>foot</command></action>
+    </keybind>
+
+    <!-- Gestores de archivos: GTK (Thunar) y Qt (pcmanfm-qt) -->
+    <keybind key="W-e">
+      <action name="Execute"><command>thunar</command></action>
+    </keybind>
+    <keybind key="W-S-e">
+      <action name="Execute"><command>pcmanfm-qt</command></action>
+    </keybind>
+
+    <!-- Noctalia: lanzador, centro de control, ajustes, bloqueo -->
+    <keybind key="W-space">
+      <action name="Execute"><command>noctalia msg panel-toggle launcher</command></action>
+    </keybind>
+    <keybind key="W-s">
+      <action name="Execute"><command>noctalia msg panel-toggle control-center</command></action>
+    </keybind>
+    <keybind key="W-,">
+      <action name="Execute"><command>noctalia msg settings-toggle</command></action>
+    </keybind>
+    <keybind key="W-l">
+      <action name="Execute"><command>noctalia msg session lock</command></action>
+    </keybind>
+
+    <!-- Teclas multimedia -->
+    <keybind key="XF86AudioRaiseVolume">
+      <action name="Execute"><command>noctalia msg volume-up</command></action>
+    </keybind>
+    <keybind key="XF86AudioLowerVolume">
+      <action name="Execute"><command>noctalia msg volume-down</command></action>
+    </keybind>
+    <keybind key="XF86AudioMute">
+      <action name="Execute"><command>noctalia msg volume-mute</command></action>
+    </keybind>
+    <keybind key="XF86MonBrightnessUp">
+      <action name="Execute"><command>noctalia msg brightness-up</command></action>
+    </keybind>
+    <keybind key="XF86MonBrightnessDown">
+      <action name="Execute"><command>noctalia msg brightness-down</command></action>
+    </keybind>
+  </keyboard>
+</labwc_config>

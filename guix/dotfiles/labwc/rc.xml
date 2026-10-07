@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<labwc_config>
+    <theme>
+       <name>noctalia</name>
+    </theme>
+    <keyboard>
+        <!-- Include the default Labwc keybinds -->
+        <default />
+                
+        <device>
+            <layout>es</layout>
+        </device>
+
+
+        <!-- Core keys -->
+        <keybind key="W-space"><action name="Execute"><command>noctalia msg panel-toggle launcher</command></action></keybind>
+        <keybind key="W-s"><action name="Execute"><command>noctalia msg panel-toggle control-center</command></action></keybind>
+        <keybind key="W-,"><action name="Execute"><command>noctalia msg settings-toggle</command></action></keybind>
+
+        <!-- Media keys -->
+        <keybind key="XF86AudioRaiseVolume"><action name="Execute"><command>noctalia msg volume-up</command></action></keybind>
+        <keybind key="XF86AudioLowerVolume"><action name="Execute"><command>noctalia msg volume-down</command></action></keybind>
+        <keybind key="XF86AudioMute"><action name="Execute"><command>noctalia msg volume-mute</command></action></keybind>
+        <keybind key="XF86MonBrightnessUp"><action name="Execute"><command>noctalia msg brightness-up</command></action></keybind>
+        <keybind key="XF86MonBrightnessDown"><action name="Execute"><command>noctalia msg brightness-down</command></action></keybind>
+        
+
+        <keybind key="A-Tab">
+          <action name="NextWindow" />
+        </keybind>
+        <keybind key="A-S-Tab">
+          <action name="PreviousWindow" />
+        </keybind>
+        <keybind key="W-Return">
+          <action name="Execute" command="kitty" />
+        </keybind>
+        <keybind key="A-F4">
+          <action name="Close" />
+        </keybind>
+        <keybind key="W-a">
+          <action name="ToggleMaximize" />
+        </keybind>
+
+        <keybind key="A-Print">
+          <action name="Execute" command="sh -c 'mkdir -p ~/Pictures/Screenshots; grim ~/Pictures/Screenshots/screenshot-$(date +%F-%H-%M-%S).png'" />
+        </keybind>
+
+        <keybind key="S-Print">
+          <action name="Execute" command="sh -c 'mkdir -p ~/Pictures/Screenshots; grim -g &quot;$(slurp)&quot; ~/Pictures/Screenshots/screenshot-$(date +%F-%H-%M-%S).png'" />
+        </keybind>
+
+        <keybind key="C-S-Print">
+          <action name="Execute" command="sh -c 'grim -g &quot;$(slurp)&quot; - | wl-copy'" />
+        </keybind>
+
+        <keybind key="Print">
+          <action name="Execute" command="noctalia msg annotate" />
+        </keybind>
+
+    </keyboard>
+
+    <desktops>
+        <number>2</number>
+        <names>
+            <name>1</name>
+            <name>2</name>
+        </names>
+    </desktops>
+
+</labwc_config>
