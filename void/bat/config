@@ -1,0 +1,14 @@
+--theme="Catppuccin Mocha"
+
+--italic-text=always
+
+--pager="less -RFX"
+
+--map-syntax ".ignore:Git Ignore"
+--map-syntax "*.conf:INI"
+--map-syntax "*.zshrc:Bourne Again Shell (bash)"
+--map-syntax "*.bashrc:Bourne Again Shell (bash)"
+--map-syntax "*.bash_aliases:Bourne Again Shell (bash)"
+--map-syntax "*.bash_profile:Bourne Again Shell (bash)"
+--map-syntax "*.env:Bourne Again Shell (bash)"
+--map-syntax "Makefile.*:Makefile"
